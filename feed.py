@@ -28,7 +28,7 @@ with open('feed.yaml', 'r') as file:
           xml_tree.SubElement(item_element, 'title').text = item['title']
           xml_tree.SubElement(item_element, 'itunes:author').text = yaml_data['author']
           xml_tree.SubElement(item_element, 'description').text = item['description']
-          xml_tree.SubElement(item_element, 'itunes: duration').text = item['duration']
+          xml_tree.SubElement(item_element, 'itunes:duration').text = item['duration']
           xml_tree.SubElement(item_element, 'pubDate').text = item['published']
 
           enclosure = xml_tree.SubElement(item_element, 'enclosure', {
